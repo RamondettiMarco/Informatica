@@ -49,4 +49,17 @@ public class Televisore{
         luminosita = 40;
         acceso = false;
     }
+    
+    @Override
+    public boolean equals(Object x){
+        int c = ((Televisore)x).getCanale();
+        int p = ((Televisore)x).getPollici();
+        int l = ((Televisore)x).getLuminosita();
+        int v = ((Televisore)x).getVolume();
+        String col = ((Televisore)x).getColore();
+        String s = ((Televisore)x).getSchermo();
+        boolean on = ((Televisore)x).isAcceso();
+        return(c == this.canale && p == this.pollici && l == this.luminosita && v == this.volume && col == this.colore && s == this.schermo && on == this.acceso);
+    }
+
 }
