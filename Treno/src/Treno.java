@@ -25,4 +25,14 @@ public class Treno {
     private void setPartenza(String p) {partenza = p;}
     public String getArrivo() {return arrivo;}
     private void setArrivo(String a) {arrivo = a;}
+
+    @Override
+    public boolean equals(Object x){
+        String c = ((Treno)x).getClasse();
+        String com = ((Treno)x).getCompagnia();
+        int v = ((Treno)x).getVelocita();
+        String p = ((Treno)x).getPartenza();
+        String a = ((Treno)x).getArrivo();
+        return(c == this.classe && com == this.compagnia && v == this.velocita && p == this.partenza && a == this.arrivo);
+    }
 }
