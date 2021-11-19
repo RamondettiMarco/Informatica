@@ -26,7 +26,8 @@ public class Televisore{
     public int getLuminosita(){return luminosita;}
     public boolean isAcceso() {return acceso;}
     public void set_canale(int c) {if(c>0 && c<99) canale = c;}
-
+    public void set_Luminosita(int l) {luminosita = l;}
+    public void set_Volume(int v) {volume = v;}
     //operazioni
 
     public void accendi(){acceso = true;}
@@ -49,7 +50,6 @@ public class Televisore{
         luminosita = 40;
         acceso = false;
     }
-    
     @Override
     public boolean equals(Object x){
         int c = ((Televisore)x).getCanale();
