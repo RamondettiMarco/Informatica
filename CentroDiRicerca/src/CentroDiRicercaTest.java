@@ -1,4 +1,3 @@
-import javax.sound.midi.SysexMessage;
 import java.util.*;
 
 public class CentroDiRicercaTest {
@@ -17,6 +16,7 @@ public class CentroDiRicercaTest {
             centro.set_senior(nomeSenior);
             String senior = centro.get_senior();
             System.out.println("Nome senior: "+senior+".");
+            centro.set_Area(5);
 
             //JUNIOR
             centro.set_numJunior(4);
@@ -36,6 +36,25 @@ public class CentroDiRicercaTest {
             System.out.println("Area del progetto: "+areaProgetto+".");
         }
 
-    }
+        //SECONDO OGGETTO
+        Scanner a = new Scanner(System.in);
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Secondo centro di ricerca: ");
+        CentroDiRicerca c2 = new CentroDiRicerca();
+        System.out.println("Inserisci il numero di Team: ");
+        int team = a.nextInt();
+        c2.set_numTeam(team);
+        System.out.println("Inserisci il numero di junior: ");
+        int j = a.nextInt();
+        c2.set_numJunior(j);
+        System.out.println("Inserisci il numero dell'area: ");
+        int area = a.nextInt();
+        c2.set_Area(area);
 
+        if(c2.equals(centro)){
+            System.out.println("L'oggetto1 e l'oggetto 2 Sono UGUALI");
+        }else{
+            System.out.println("L'oggetto1 e L'oggetto2 Sono DIVERSI");
+        }
+    }
 }
