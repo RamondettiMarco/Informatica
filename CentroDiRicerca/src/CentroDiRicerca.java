@@ -25,4 +25,12 @@ public class CentroDiRicerca{
 
     public int get_NumArea() {return nArea;}   //
     public void set_Area(int nA){nArea = nA;}
+
+    @Override
+    public boolean equals(Object x){
+        int t = ((CentroDiRicerca)x).get_numTeam();
+        int j = ((CentroDiRicerca)x).get_numJunior();
+        int a = ((CentroDiRicerca)x).get_NumArea();
+        return(t == this.numTeam && j == this.numJunior && a == this.nArea);
+    }
 }
