@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Garage{
     private int livelli;
     private int postoAuto;
@@ -44,4 +46,17 @@ public class Garage{
     private void setPenale(int p){penale = p;}
     public void applicoPenale(){if(tempoPermanenza>8) prezzoTot = prezzoTot + penale;}
     public float get_prezzoConPenale(){return prezzoTot;}
+
+   @Override
+    public boolean equals(Object x){
+        int liv = ((Garage)x).get_livelli();
+        int postoAuto = ((Garage)x).get_postoAuto();
+        String tipoAuto = ((Garage)x).get_tipoAuto();
+        int postiLiberi = ((Garage)x).getPostiLiberi();
+        int postiOccupati = ((Garage)x).getPostiOccupati();
+        float prezzoTot = ((Garage)x).get_prezzoConPenale();
+        return (liv == this.livelli && postoAuto == this.postoAuto && tipoAuto == this.tipoAuto
+                && postiLiberi == this.postiLiberi && postiOccupati == this.postiOccupati
+                && prezzoTot == this.prezzoTot);
+   }
 }
