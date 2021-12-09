@@ -13,5 +13,7 @@ public class LibroTest {
         System.out.println("Costo pagina: " +Libro.getCostoPagina());
         System.out.println(l1.getTitolo()+ ": " +l1.prezzo());
         System.out.println(l2.getTitolo()+ ": " +l2.prezzo());
+        Libro l3 = new Libro(l2);
+        System.out.println(l3);
     }
 }

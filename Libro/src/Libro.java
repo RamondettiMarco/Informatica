@@ -14,9 +14,9 @@ public class Libro {
     }
 
     public Libro(Libro libro){
-        this.titolo = libro.titolo;
-        this.autore = libro.autore;
-        this.numeroPagine = libro.numeroPagine;
+        this.titolo = libro.getTitolo();
+        this.autore = libro.getAutore();
+        this.numeroPagine = libro.getNumeroPagine();
     }
 
     public String getTitolo() {
@@ -53,5 +53,15 @@ public class Libro {
 
     public double prezzo(){
         return COSTO_FISSO + (numeroPagine * costoPagina);
+    }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "titolo='" + titolo + '\'' +
+                ", autore='" + autore + '\'' +
+                ", numeroPagine=" + numeroPagine +
+                ", COSTO_FISSO=" + COSTO_FISSO +
+                '}';
     }
 }
